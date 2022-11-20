@@ -2,7 +2,7 @@ import { useState } from "react";
 import Input from "../components/InputMovies/index.tsx";
 import Timeline from "../components/Timeline/index.tsx";
 
-function ListMovies({onSearch, listMovies, setId}) {
+function ListMovies({onSearch, listMovies, setId, setPages}) {
   const [search, setSearch] = useState<string>("");
   
   return (
@@ -14,7 +14,8 @@ function ListMovies({onSearch, listMovies, setId}) {
       <Timeline 
         search={search}
         listMovies={listMovies} 
-        setId={setId} />
+        setId={setId}
+        setPages={setPages}/>
     </>
   )
 }

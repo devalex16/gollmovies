@@ -5,7 +5,7 @@ type PropsHeader = {
   setSearch: bool
 }
 
-function Header({onSearch, setSearch}: PropsHeader) {
+function Header({ onSearch, setSearch }: PropsHeader) {
   return (
     <StyledHeader>
       {/* Logo */}

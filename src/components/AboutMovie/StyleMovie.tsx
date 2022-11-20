@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const StyleBanner = styled.div`
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
   .capa {
    height: 40vh;
    width: 100vw;
@@ -24,17 +27,23 @@ const StyleBanner = styled.div`
      font-size: 1.6em;
      font-weight: bold;
      text-align: left;
+     @media (min-width: 700px) {
+      font-size: 2em;
+     }
     }
     p {
      font-size: 1em;
      font-weight: 300;
      text-align: left;
+     @media (min-width: 700px) {
+      font-size: 1.2em;
+     }
     }
    }
   }
 
   .info {
-   width: 100vw;
+   width: 100%;
    div {
     width: 100%;
     display: flex;
@@ -51,48 +60,68 @@ const StyleBanner = styled.div`
      font-size: 1.3em;
      text-align: center;
      color: #22333B;
+     @media (min-width: 700px) {
+      font-size: 1.9em;
+      padding: 20px;
+     }
     }
     p {
      font-size: 1.3em;
      font-weight: 300;
      margin: 0px 10px;
+     @media (min-width: 700px) {
+      font-size: 1.8em;
+     }
     }
     .logo-studio {
-     margin: 0px 10px;
+     margin: 0px 0px;
      max-height: 60px;
      max-width: 100px;
      border: none;
      border-radius: 10px;
      background: white;
+     @media (min-width: 700px) {
+      max-height: 120px;
+      max-width: 200px;
+     }
     }
    }
    .sinopse {
     display: block;
-    width: 100vw;
+    width: 100%;
     margin-top: 10px;
     padding: 20px;
     h2 {
      font-size: 1.6em;
      font-weight: bold;
      text-align: left;
+     @media (min-width: 700px) {
+      font-size: 2em;
+     }
     }
     p {
      margin: 10px 0px;
      font-size: 1em;
      font-weight: 400;
      text-align: left;
+     @media (min-width: 700px) {
+      font-size: 1.4em;
+     }
     }
    }
    footer {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 10px 0px;
     a {
      background: none;
      color: white;
-     font-size: 0.8em;
+     font-size: 0.9em;
+     @media (min-width: 700px) {
+      font-size: 1.6em;
+     }
     }
    }
   }

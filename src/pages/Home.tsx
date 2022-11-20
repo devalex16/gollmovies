@@ -6,7 +6,7 @@ type PropsHome = {
   onSearch: bool,
   setSearch: bool
 }
-function Home({onSearch, setSearch}: PropsHome) {
+function Home({ onSearch, setSearch }: PropsHome) {
   return (
     <>
       <Header onSearch={onSearch} setSearch={setSearch} />

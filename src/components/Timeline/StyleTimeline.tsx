@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const StyleTimeline = styled.div`
-  margin: 30px 10px;
+  margin: 0px 0px;
   h1 {
    font-size: 2em;
    font-weight: 100;
    text-align: left;
    color: #40FFC2;
-   margin: 20px 0px;
+   margin: 20px 10px;
    @media (min-width: 700px) {
     font-size: 2.2em;
    }
@@ -16,7 +16,7 @@ const StyleTimeline = styled.div`
    width: 100vw;
    display: flex;
    flex-wrap: wrap;
-   margin-left: -10px;
+   justify-content: center;
    text-decoration: none;
    
    .banner {
@@ -67,6 +67,24 @@ const StyleTimeline = styled.div`
      }
     }
    }
+  }
+  .button-pages {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 10px 0px;
+   .buttons {
+     padding: 5px 17px;
+     margin: 0px 10px;
+     margin-left: 20px;
+     background-color: #40FFC2;
+     border-radius: 200px;
+     font-size: 0.8em;
+     text-align: center;
+     color: #22333B;
+    }
   }
 `;
 
