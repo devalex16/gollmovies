@@ -9,14 +9,16 @@ import api from "./services/api";
 import CSSReset from './style/StyleGlobals';
 
 export default function App() {
-  const [onSearch, setSearch] = useState<bool>(false);
-  const [listMovies, setListMovies] = useState<object>({});
-  const [pages, setPages] = useState<string>("page=1")
-  const [id, setId] = useState<int>(0);
-  const [preview, setInfoMovie] = useState<object>({})
+  const [onSearch, setSearch] = useState<boolean>(false);
+  const [pages, setPages] = useState<string>("page=1");
+  const [id, setId] = useState<number>(0);
+  const [listMovies, setListMovies] = useState({});
+  const [preview, setInfoMovie] = useState({});
 
+  /*CHAVE DA API*/
   const API_KEY = 'e117d50f10743c53c008d7656d44be12';
 
+  /*Hook atualiza quando pages muda*/
   useEffect(() => {
     function listenerMovies() {
       api.get(`/popular?api_key=${API_KEY}&language=pt-BR&${pages}`)
@@ -28,6 +30,7 @@ export default function App() {
     listenerMovies();
   }, [pages])
 
+  /*Hook atualiza quando ID muda*/
   useEffect(() => {
     function getInfoMovie() {
       api.get(`/${id}?api_key=${API_KEY}&language=pt-BR`)

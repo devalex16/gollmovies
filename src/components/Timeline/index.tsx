@@ -2,7 +2,13 @@ import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import StyledTimeline from "./StyleTimeline";
 
-function Timeline({ search, listMovies, setId, setPages }) {
+type TimeProps = {
+  search: string,
+  setId: number,
+  setPages: string
+}
+function Timeline({ search, listMovies, setId, setPages }: TimeProps) {
+  
   const listBanner = Object.keys(listMovies)
 
   return (
@@ -12,6 +18,7 @@ function Timeline({ search, listMovies, setId, setPages }) {
       </h1>
       <section className="list">
         {listBanner.filter((list) => {
+          //Filtrando filmes
           const banner = listMovies[list]
           const titleNormalized = banner.title.toLowerCase();
           const searchNormalized = search.toLowerCase();
@@ -19,6 +26,7 @@ function Timeline({ search, listMovies, setId, setPages }) {
         }).map((list) => {
           const banner = listMovies[list]
           const data = banner.release_date.split("-")
+          //Pegando data e transformando legível
           function getData() {
             let mes = "jan";
             if (data[1] == '01') mes = 'jan';
@@ -71,7 +79,6 @@ function Timeline({ search, listMovies, setId, setPages }) {
         </div>
         <div onClick={() => {
           setPages("page=3")
-          console.log("pages")
         }} className="buttons">
           3
         </div>

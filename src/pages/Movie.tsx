@@ -2,12 +2,21 @@ import { useState } from "react";
 import Input from "../components/InputMovies/index.tsx";
 import Timeline from "../components/Timeline/index.tsx";
 
-function ListMovies({onSearch, listMovies, setId, setPages}) {
+type ListProps = {
+  onSearch: boolean,
+  setId: number,
+  setPages: string
+}
+
+function ListMovies({ onSearch, listMovies, setId, setPages}: ListProps) {
+  /*
+   - Pega dados que digita do usuário
+   - M
+  */
   const [search, setSearch] = useState<string>("");
   
   return (
     <>
-      {/*Button aparece e desaparece*/}
       {onSearch
        ? <Input setSearch={setSearch} />
        : false}

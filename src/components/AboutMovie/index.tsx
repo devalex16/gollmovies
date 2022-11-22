@@ -1,7 +1,9 @@
 import StyledMovie from "./StyleMovie";
 
 function AboutMovie({ preview }) {
+  
   const info = Object.keys(preview)
+  /*Path da Logo*/
   const logo_production = preview.production_companies[0].logo_path
   return (
     <StyledMovie>
@@ -12,6 +14,7 @@ function AboutMovie({ preview }) {
             {preview.title}
           </h1>
           <p>
+            {/*pegando generos dos filmes*/}
             {preview.genres.map((pre) => {
               return ` ${pre.name}`
             })}

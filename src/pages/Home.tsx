@@ -3,8 +3,8 @@ import Header from "../components/Header/index";
 import Footer from "../components/Footer/index";
 
 type PropsHome = {
-  onSearch: bool,
-  setSearch: bool
+  onSearch: boolean,
+  setSearch: boolean
 }
 function Home({ onSearch, setSearch }: PropsHome) {
   return (
