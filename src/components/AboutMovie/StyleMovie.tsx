@@ -7,7 +7,7 @@ const StyleBanner = styled.div`
   .capa {
    height: 40vh;
    width: 100vw;
-   margin: 20px 0px;
+   margin: 1px 0px;
    position: relative;
    
    img {
@@ -44,12 +44,12 @@ const StyleBanner = styled.div`
 
   .info {
    width: 100%;
+   margin: 10px 0px;
    div {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0px 0px;
     position: relative;
     mark {
      padding: 15px;
@@ -91,6 +91,9 @@ const StyleBanner = styled.div`
     width: 100%;
     margin-top: 10px;
     padding: 20px;
+    @media (min-width: 700px) {
+     width: 60%;
+    }
     h2 {
      font-size: 1.6em;
      font-weight: bold;
@@ -100,9 +103,11 @@ const StyleBanner = styled.div`
      }
     }
     p {
-     margin: 10px 0px;
+     margin: 10px auto;
      font-size: 1em;
      font-weight: 400;
+     bottom: 1px;
+    }
      text-align: left;
      @media (min-width: 700px) {
       font-size: 1.4em;
@@ -120,7 +125,7 @@ const StyleBanner = styled.div`
      color: white;
      font-size: 0.9em;
      @media (min-width: 700px) {
-      font-size: 1.6em;
+      font-size: 1.2em;
      }
     }
    }

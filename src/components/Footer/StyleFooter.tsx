@@ -8,12 +8,16 @@ const StyleFooter = styled.div`
   align-items: center;
   justify-content: center;
   background-color: black;
+  @media (min-width: 700px) {
+    position: fixed;
+    bottom: 1px;
+  }
   p {
    font-size: 0.8em;
    font-weight: 300;
    text-align: center;
    @media (min-width: 700px) {
-    font-size: 1.2em;
+    font-size: 1em;
    }
   }
   a {
@@ -23,7 +27,7 @@ const StyleFooter = styled.div`
    img {
     width: 100px;
     @media (min-width: 700px) {
-     width: 200px;
+     width: 150px;
     }
    }
   }
